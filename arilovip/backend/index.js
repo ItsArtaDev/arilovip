@@ -11,6 +11,11 @@ app.use('/api/dashboard', require('./routes/dashboard'));
 app.use('/api/users', require('./routes/users'));
 app.use('/api/servers', require('./routes/servers'));
 app.use('/api/notifications', require('./routes/notifications'));
+app.use('/api/reseller', require('./routes/reseller'));
+app.use('/api/user', require('./routes/user'));
+app.use('/api/discount-codes', require('./routes/discountCodes'));
+app.use('/api/payments', require('./routes/payments'));
+app.use('/api/reports', require('./routes/reports'));
 
 app.get('/', (req, res) => {
   res.send('Hello from AriloVIP backend!');
