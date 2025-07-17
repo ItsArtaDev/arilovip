@@ -7,12 +7,22 @@ i18n
     resources: {
       en: {
         translation: {
-          "welcome": "Welcome to AriloVIP"
+          "welcome": "Welcome to AriloVIP",
+          "dashboard": "Dashboard",
+          "total_users": "Total Users",
+          "online_users": "Online Users",
+          "total_traffic": "Total Traffic",
+          "revenue": "Revenue"
         }
       },
       fa: {
         translation: {
-          "welcome": "به آریلو وی‌آی‌پی خوش آمدید"
+          "welcome": "به آریلو وی‌آی‌پی خوش آمدید",
+          "dashboard": "داشبورد",
+          "total_users": "تعداد کل کاربران",
+          "online_users": "کاربران آنلاین",
+          "total_traffic": "ترافیک کل",
+          "revenue": "درآمد"
         }
       }
     },
