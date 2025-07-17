@@ -42,6 +42,21 @@ const Users = () => {
     }
   };
 
+  const handleDeleteUser = async (id) => {
+    try {
+      const token = localStorage.getItem('token');
+      const config = {
+        headers: {
+          'x-auth-token': token,
+        },
+      };
+      await axios.delete(`/api/users/${id}`, config);
+      fetchUsers();
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   return (
     <MainLayout>
       <h1 className="text-2xl font-bold">Users</h1>
@@ -90,9 +105,12 @@ const Users = () => {
                   <a href="#" className="text-indigo-600 hover:text-indigo-900">
                     Edit
                   </a>
-                  <a href="#" className="ml-4 text-red-600 hover:text-red-900">
+                  <button
+                    onClick={() => handleDeleteUser(user._id)}
+                    className="ml-4 text-red-600 hover:text-red-900"
+                  >
                     Delete
-                  </a>
+                  </button>
                 </td>
               </tr>
             ))}

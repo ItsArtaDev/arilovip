@@ -32,13 +32,31 @@ const Reports = () => {
       <div className="mt-6">
         <h2 className="text-xl font-bold">Users Report</h2>
         <div className="mt-4 overflow-x-auto bg-white rounded-lg shadow-md">
-          {/* Users table */}
+          <table className="min-w-full">
+            {/* ... table head ... */}
+            <tbody>
+              {users.map((user) => (
+                <tr key={user._id}>
+                  {/* ... table cells ... */}
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
       <div className="mt-6">
         <h2 className="text-xl font-bold">Payments Report</h2>
         <div className="mt-4 overflow-x-auto bg-white rounded-lg shadow-md">
-          {/* Payments table */}
+          <table className="min-w-full">
+            {/* ... table head ... */}
+            <tbody>
+              {payments.map((payment) => (
+                <tr key={payment._id}>
+                  {/* ... table cells ... */}
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </MainLayout>
