@@ -10,6 +10,8 @@ import ResellerDashboard from './pages/ResellerDashboard';
 import UserDashboard from './pages/UserDashboard';
 import DiscountCodes from './pages/DiscountCodes';
 import Reports from './pages/Reports';
+import Logs from './pages/Logs';
+import Settings from './pages/Settings';
 import PrivateRoute from './components/routing/PrivateRoute';
 
 function App() {
@@ -86,6 +88,22 @@ function App() {
           element={
             <PrivateRoute>
               <Reports />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/logs"
+          element={
+            <PrivateRoute>
+              <Logs />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/settings"
+          element={
+            <PrivateRoute>
+              <Settings />
             </PrivateRoute>
           }
         />

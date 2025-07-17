@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const startRadiusServer = require('./radius-server');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -16,6 +17,9 @@ app.use('/api/user', require('./routes/user'));
 app.use('/api/discount-codes', require('./routes/discountCodes'));
 app.use('/api/payments', require('./routes/payments'));
 app.use('/api/reports', require('./routes/reports'));
+app.use('/api/logs', require('./routes/logs'));
+app.use('/api/settings', require('./routes/settings'));
+app.use('/api/telegram', require('./routes/telegram'));
 
 app.get('/', (req, res) => {
   res.send('Hello from AriloVIP backend!');
@@ -23,4 +27,5 @@ app.get('/', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Backend server is running on port ${port}`);
+  startRadiusServer();
 });
