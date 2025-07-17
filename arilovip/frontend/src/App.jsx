@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Users from './pages/Users';
+import Servers from './pages/Servers';
+import Profile from './pages/Profile';
+import Notifications from './pages/Notifications';
 import PrivateRoute from './components/routing/PrivateRoute';
 
 function App() {
@@ -23,6 +26,30 @@ function App() {
           element={
             <PrivateRoute>
               <Users />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/servers"
+          element={
+            <PrivateRoute>
+              <Servers />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <PrivateRoute>
+              <Profile />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/notifications"
+          element={
+            <PrivateRoute>
+              <Notifications />
             </PrivateRoute>
           }
         />
